@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://b7u4o588tr84c"]
+
+[ext_resource type="Script" path="res://main.gd" id="1_gycks"]
+[ext_resource type="Script" path="res://button.gd" id="2_743on"]
+
+[node name="Main" type="Node"]
+script = ExtResource("1_gycks")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = 817.0
+offset_top = 25.0
+offset_right = 1231.0
+offset_bottom = 126.0
+text = "Welcome to Eagle Eyes!"
+
+[node name="StartGameButton" type="Button" parent="."]
+offset_left = 778.0
+offset_top = 86.0
+offset_right = 1065.0
+offset_bottom = 311.0
+text = "Start game"
+script = ExtResource("2_743on")
+
+[connection signal="pressed" from="StartGameButton" to="StartGameButton" method="_on_pressed"]
